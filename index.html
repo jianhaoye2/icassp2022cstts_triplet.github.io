@@ -1,0 +1,261 @@
+
+<!-- saved from url=TODO -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+    <title>Audio samples from "IMPROVING CROSS-LINGUAL SPEECH SYNTHESIS WITH TRIPLET TRAINING SCHEME"</title>
+  </head>
+  <body>
+    <article>
+      <header>
+          <h1>Audio samples from "IMPROVING CROSS-LINGUAL SPEECH SYNTHESIS WITH TRIPLET TRAINING SCHEME"</h1>
+      </header>
+    </article>
+
+    <div><b>Abstract:</b>
+Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthesize speech in a language foreign to a monolingual speaker. However, there is still a large gap between the pronunciation of generated cross-lingual speech and that of native speakers in terms of naturalness and intelligibility. In this paper, a triplet training scheme is proposed to enhance the cross-lingual pronunciation by allowing previously unseen content and speaker combinations to be seen during training. Proposed method introduces an extra fine-tune stage with triplet loss during training, which efficiently draws the pronunciation of the synthesized foreign speech closer to those from the native anchor speaker, while preserving the non-native speaker's timbre. Experiments are conducted amongst two different state-of-the-art baseline cross-lingual TTS systems and our proposed method. Both objective and subjective evaluations show the proposed method brings significant improvement in both intelligibility and naturalness of the synthesized cross-lingual speech.
+		<div>
+
+      <a name="origin_wav"><h2>Reference Audio</h2></a>
+       <table>
+        <tbody>
+        <tr>
+          <td></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">EN Text: The various grades were distinguished by cockades and bows of different colors.</div></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">EN Text: Enactment of this statute would mean that the investigation of any of the acts covered and of the possibility of a further attempt</div></td>
+        </tr>
+        <tr>
+          <td>EN Speaker (Anchor speaker of English)</td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/en_spk/target1.wav"></audio></td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/en_spk/target2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">CN Text: 假语村言别再拥抱我。</div></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">CN Text: 柏威夏古刹是泰国和柬埔寨一直以来在争夺的一块文化遗址。</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Female Speaker (Anchor speaker of Mandarin)</td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/chf_spk/target1.wav"></audio></td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/chf_spk/target2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap=""></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">CN Text: 丛中玉很明白，这些上位龙族都是眼高于顶的存在，不敢再留转身匆匆去了。</div></td>
+          <td align="left" style="width: 360px;"><div style="width: 350px;">CN Text: 皇元朗站起身，微笑道。</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Male Speaker</td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/chm_spk/target1.wav"></audio></td>
+          <td style="width: 360px;"><audio controls=""><source src="samples/references/chm_spk/target2.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+
+		   <div>
+
+       <a name="base"><h2>Base/Base-FE + Triplet</h2></a>
+
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-u71t{font-size:medium;text-align:left;vertical-align:top}
+.tg .tg-qjz7{font-size:medium;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+      <th class="tg-u71t" colspan="5">English Sample 1. EN Text: the site of the present Sessions House of the Old Bailey, and the operation was witnessed by students and a number of curious spectators.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-u71t"></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">EN Speaker</td>
+    <!-- base_en_text1_EN Speaker -->
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkEn/1.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Male Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkCnM/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkCnM/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkCnM/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkCnM/1.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Female Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkCnF/1.wav"></audio></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-u71t{font-size:medium;text-align:left;vertical-align:top}
+.tg .tg-qjz7{font-size:medium;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+      <th class="tg-u71t" colspan="5">English Sample 2. EN Text: At the court martial hearing which followed, Oswald admitted that he had been rather drunk when the incident occurred.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-u71t"></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">EN Speaker</td>
+    <!-- base_en_text1_EN Speaker -->
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkEn/2.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Male Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkCnM/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkCnM/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkCnM/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkCnM/2.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Female Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textEn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textEn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textEn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textEn_spkCnF/2.wav"></audio></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-u71t{font-size:medium;text-align:left;vertical-align:top}
+.tg .tg-qjz7{font-size:medium;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+      <th class="tg-u71t" colspan="5">Mandarin Sample 1. CN Text: 暖暖也越来越逆反了。</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-u71t"></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">EN Speaker</td>
+    <!-- base_en_text1_EN Speaker -->
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textCn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textCn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textCn_spkEn/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textCn_spkEn/1.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Female Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textCn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textCn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textCn_spkCnF/1.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textCn_spkCnF/1.wav"></audio></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-u71t{font-size:medium;text-align:left;vertical-align:top}
+.tg .tg-qjz7{font-size:medium;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+      <th class="tg-u71t" colspan="5">Mandarin Sample 2. CN Text: 国家已经承认我们了，但是太晚了</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-u71t"></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
+    <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">EN Speaker</td>
+    <!-- base_en_text1_EN Speaker -->
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textCn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textCn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textCn_spkEn/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textCn_spkEn/2.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-u71t">CN Female Speaker</td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base/textCn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/Base_Triplet/textCn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE/textCn_spkCnF/2.wav"></audio></td>
+    <td style="width: 360px;"><audio controls=""><source src="samples/BaseFE_TripletDFE/textCn_spkCnF/2.wav"></audio></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+      <p>&nbsp;</p>
+    </div>
+
+</body></html>
