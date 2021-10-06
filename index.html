@@ -12,8 +12,7 @@
     </article>
 
     <div><b>Abstract:</b>
-Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthesize speech in a language foreign to a monolingual speaker. However, there is still a large gap between the pronunciation of generated cross-lingual speech and that of native speakers in terms of naturalness and intelligibility. In this paper, a triplet training scheme is proposed to enhance the cross-lingual pronunciation by allowing previously unseen content and speaker combinations to be seen during training. Proposed method introduces an extra fine-tune stage with triplet loss during training, which efficiently draws the pronunciation of the synthesized foreign speech closer to those from the native anchor speaker, while preserving the non-native speaker's timbre. Experiments are conducted amongst two different state-of-the-art baseline cross-lingual TTS systems and our proposed method. Both objective and subjective evaluations show the proposed method brings significant improvement in both intelligibility and naturalness of the synthesized cross-lingual speech.
-		<div>
+Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthesize speech in a language foreign to a monolingual speaker. However, there is still a large gap between the pronunciation of generated cross-lingual speech and that of native speakers in terms of naturalness and intelligibility. In this paper, a triplet training scheme is proposed to enhance the cross-lingual pronunciation by allowing previously unseen content and speaker combinations to be seen during training. Proposed method introduces an extra fine-tune stage with triplet loss during training, which efficiently draws the pronunciation of the synthesized foreign speech closer to those from the native anchor speaker, while preserving the non-native speaker's timbre. Experiments are conducted based on a state-of-the-art baseline cross-lingual TTS system and its enhanced variant. All the objective and subjective evaluations show the proposed method brings significant improvement in both intelligibility and naturalness of the synthesized cross-lingual speech.		<div>
 
       <a name="origin_wav"><h2>Reference Audio</h2></a>
        <table>
@@ -53,7 +52,7 @@ Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthe
 
 		   <div>
 
-       <a name="base"><h2>Base/Base-FE + Triplet</h2></a>
+       <a name="base"><h2>Base/Base_FE_DFE + Triplet</h2></a>
 
 <style type="text/css">
 .tg  {border:none;border-collapse:collapse;border-spacing:0;}
@@ -75,8 +74,8 @@ Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthe
     <td class="tg-u71t"></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE</span><br></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE + Triplet </span><br></td>
   </tr>
   <tr>
     <td class="tg-u71t">EN Speaker</td>
@@ -127,8 +126,8 @@ Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthe
     <td class="tg-u71t"></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for Mandarin speaker speaks English)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE</span><br></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE + Triplet </span><br></td>
   </tr>
   <tr>
     <td class="tg-u71t">EN Speaker</td>
@@ -181,8 +180,8 @@ Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthe
     <td class="tg-u71t"></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE</span><br></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE + Triplet </span><br></td>
   </tr>
   <tr>
     <td class="tg-u71t">EN Speaker</td>
@@ -228,8 +227,8 @@ Recent advances in cross-lingual text-to-speech (TTS) made it possible to synthe
     <td class="tg-u71t"></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base</span></td>
     <td class="tg-qjz7"><span style="font-style:italic">Base + Triplet</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE</span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
-    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base-FE + Triplet-DFE </span><br><span style="font-weight:400;font-style:italic">+ transfer f0,duration,energy in cross-lingual inference (Only for English speaker speaks Mandarin)</span></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE</span><br></td>
+    <td class="tg-qjz7"><span style="font-weight:400;font-style:italic">Base_FE_DFE + Triplet </span><br></td>
   </tr>
   <tr>
     <td class="tg-u71t">EN Speaker</td>
